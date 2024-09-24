@@ -1,12 +1,35 @@
-<style>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>My Portfolio</title>
+        <link href="indexfile.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Warang+Citi&display=swap" rel="stylesheet">
+        <style>
             .noto-sans-warang-citi-regular {
                 font-family: "Noto Sans Warang Citi", sans-serif;
                 font-weight: 400;
                 font-style: normal;
             }
+            a {
+                color: blueviolet;
+            }
             body {
                 padding: 5px;
                 background-color: black;
+            }
+            div.cont {
+                position: absolute;
+                height: 150px;
+                top: 2000px;
+                margin-top: 150px;
+                background-color: rgb(24, 22, 22);
+                padding-left: 20px;
+                width: 95vw;
+                color: antiquewhite;
+                font-size: 12px;
             }
             div.contact {
                 display: flex;
@@ -16,22 +39,23 @@
                 width: 95vw;
                 border-color: antiquewhite;
                 border-radius: 1px;
-                top: 280px;
+                top: 300px;
                 background-color: rgb(15, 14, 14);
                 color: white;
                 height: 100px;
                 margin-top: 80px;
+                margin-bottom: 20px;
                 justify-content: center;
                 overflow-y: hidden;
             }
             div.contact > div, div.contact > a {
-                background-color: rgb(29, 6, 51);
+                background-color: rgb(39, 9, 68);
                 padding: 4%;
                 margin-left: 3%;
                 width: 18%;
             }
             div.contact > div:hover, div.contact > a:hover {
-                background-color: rgb(41, 8, 71);
+                background-color: rgb(50, 11, 87);
                 border-style: groove;
                 border-width: 1px;
                 border-color: mediumpurple;
@@ -48,9 +72,9 @@
             div.desc {
                 position: absolute;
                 width: 80%;
-                top: 110px;
+                top: 120px;
                 padding: 3px;
-                font-size: 1vw;
+                font-size: 0.9em;
                 text-overflow: ellipsis;
                 overflow-y: hidden;
                 margin-top: 20px;
@@ -61,12 +85,23 @@
                 height: 400px;
                 top: 380px;
                 margin-top: 120px;
-                background-color: rgb(15, 14, 14);
+                background-color: rgb(24, 22, 22);
+                border-color: aliceblue;
+                border-width: 10px;
                 padding-left: 20px;
                 width: 95vw;
                 z-index: 3;
             }
             div.eduitem {
+                position: absolute;
+                height: 150px;
+                border-width: 1px;
+                border-color: whitesmoke;
+                color: antiquewhite;
+            }
+            div.eduitem2 {
+                top: 350px;
+                margin-top: 40px;
                 position: absolute;
                 height: 150px;
                 border-width: 1px;
@@ -81,9 +116,19 @@
             div.imgdiv {
                 position: absolute;
                 width: 15%;
-                top: 10%;
+                top: 7%;
                 height: 60%;
                 left: 3%;
+            }
+            div.imgoptimal {
+                position: absolute;
+                height: 200px;
+                margin-top: 20px;
+            }
+            div.imgstylemate {
+                position: absolute;
+                height: 200px;
+                margin-top: 20px;
             }
             div.info {
                 position: absolute;
@@ -91,7 +136,7 @@
                 background-color: rgb(255, 255, 255);
                 height: 210px;
                 padding: 10px;
-                padding-left: 10%;
+                padding-left: 12%;
                 border-radius: 5px;
                 left: 10%;
                 text-align: justify;
@@ -112,12 +157,30 @@
                 width: 90%;
                 height: 100px;
                 padding-left: 10px;
-                font-size: 4vw;
+                font-size: 3em;
                 padding: 5px;
                 text-overflow: ellipsis;
                 overflow: hidden;
                 margin-top: 30px;
                 margin-bottom: 20px;
+            }
+            div.project {
+                position: absolute;
+                height: 700px;
+                top: 750px;
+                margin-top: 200px;
+                background-color: rgb(24, 22, 22);
+                padding-left: 20px;
+                width: 95vw;
+            }
+            div.skill {
+                position: absolute;
+                height: 400px;
+                top: 1500px;
+                margin-top: 200px;
+                background-color: rgb(24, 22, 22);
+                padding-left: 20px;
+                width: 95vw;
             }
             img.cert {
                 height: 150px;
@@ -131,7 +194,7 @@
             }
             img.image {
                 position: absolute;
-                width: 100%;
+                width: 15em;
                 border-radius: 100%;
                 top: 0px;
                 z-index: 1;
@@ -140,13 +203,27 @@
                 width: 110%;
                 z-index: 2;
             }
-            p.edu {
-                color: whitesmoke;
-                font-size: 30px;
+            img.optimal {
+                height: 150px;
+                position: absolute;
+                top: 0px;
+            }
+            img.stylemate {
+                height: 150px;
+                position: absolute;
+                top: 0px;
             }
             p.course {
                 color: whitesmoke;
                 font-size: 20px;
+            }
+            p.edu {
+                color: whitesmoke;
+                font-size: 30px;
+            }
+            p.lang {
+                color: whitesmoke;
+                font-size: 14px;
             }
             p.school {
                 color: hotpink;
@@ -198,6 +275,41 @@
                     <img src="alxcert.jpg" class="cert">
                 </div>
             </div>
+        </div>
+        <div class="project">
+            <p class="edu">Projects</p>
+            <div class="eduitem">
+                <p class="course"><a href="https://github.com/Fortune-0/Stylemate">Stylemate</a></p>
+                <p class="school"><a href="https://medium.com/@amarachiuvere/how-i-developed-my-very-first-web-application-ever-stylemate-82ef7f087e86?source=user_profile---------3----------------------------">Blog Post</a></p>
+                A simple, and easy-to-use web application that generates outfit styling recommendations for college students
+                <div class="imgstylemate">
+                    <img src="Stylemate.jpg" class="stylemate">
+                </div>
+            </div>
+            <div class="eduitem2">
+                <p class="course"><a href="https://github.com/Ano-ly/Optimal-Planner">Optimal Planner</a></p>
+                An event-planning web application that allows for easy event planning and management
+                <div class="imgoptimal">
+                    <img src="opplanner.jpg" class="optimal">
+                </div>
+            </div>
+        </div>
+        <div class="skill">
+            <p class="edu">Skills/Coding Languages</p>
+                <p class="lang">Python</p>
+                <p class="lang">C</p>
+                <p class="lang">HTML</p>
+                <p class="lang">CSS</p>
+                <p class="lang">Javascript</p>
+                <p class="lang">MySQL</p>
+                <p class="lang">Redis</p>
+                <p class="lang">MongoDB</p>
+                <p class="lang">DevOps</p>
+        </div>
+        <div class="cont">
+            <p class="edu">Contact me</p>
+            <p>Email: amarachiuvere@gmail.com</p>
+            <p>Phone Number: +234 902 189 6581</p>
         </div>
     </body>
 </html>
