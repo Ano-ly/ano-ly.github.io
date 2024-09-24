@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>My Portfolio</title>
-        <link href="indexfile.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Warang+Citi&display=swap" rel="stylesheet">
-        <style>
+<style>
             .noto-sans-warang-citi-regular {
                 font-family: "Noto Sans Warang Citi", sans-serif;
                 font-weight: 400;
@@ -19,24 +10,40 @@
             }
             div.contact {
                 display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
                 position: absolute;
-                width: 100vw;
+                width: 95vw;
                 border-color: antiquewhite;
                 border-radius: 1px;
-                top: 250px;
+                top: 280px;
                 background-color: rgb(15, 14, 14);
                 color: white;
                 height: 100px;
-                margin-top: 70px;
+                margin-top: 80px;
                 justify-content: center;
-                color: white;
-                font-size: 20px;
+                overflow-y: hidden;
             }
-            div.contact > div {
+            div.contact > div, div.contact > a {
                 background-color: rgb(29, 6, 51);
-                margin: 5%;
                 padding: 4%;
-                width: 20%;
+                margin-left: 3%;
+                width: 18%;
+            }
+            div.contact > div:hover, div.contact > a:hover {
+                background-color: rgb(41, 8, 71);
+                border-style: groove;
+                border-width: 1px;
+                border-color: mediumpurple;
+            }
+            div.contactme {
+                position: absolute;
+                top: 250px;
+                height: 30px;
+                font-size: 20px;
+                color: white;
+                margin-top: 70px;
+                padding-left: 20px;
             }
             div.desc {
                 position: absolute;
@@ -48,6 +55,28 @@
                 overflow-y: hidden;
                 margin-top: 20px;
                 text-wrap: wrap;
+            }
+            div.edu {
+                position: absolute;
+                height: 400px;
+                top: 380px;
+                margin-top: 120px;
+                background-color: rgb(15, 14, 14);
+                padding-left: 20px;
+                width: 95vw;
+                z-index: 3;
+            }
+            div.eduitem {
+                position: absolute;
+                height: 150px;
+                border-width: 1px;
+                border-color: whitesmoke;
+                color: antiquewhite;
+            }
+            div.imgcert {
+                position: absolute;
+                height: 200px;
+                margin-top: 20px;
             }
             div.imgdiv {
                 position: absolute;
@@ -71,7 +100,7 @@
             }
             div.intro {
                 position: absolute;
-                width: 95%;
+                width: 95vw;
                 background-color: rgb(29, 6, 51);
                 height: 250px;
                 padding: 5px;
@@ -90,6 +119,11 @@
                 margin-top: 30px;
                 margin-bottom: 20px;
             }
+            img.cert {
+                height: 150px;
+                position: absolute;
+                top: 0px;
+            }
             img.icon {
                 position: absolute;
                 top: 20%;
@@ -101,6 +135,22 @@
                 border-radius: 100%;
                 top: 0px;
                 z-index: 1;
+            }
+            img.image:hover {
+                width: 110%;
+                z-index: 2;
+            }
+            p.edu {
+                color: whitesmoke;
+                font-size: 30px;
+            }
+            p.course {
+                color: whitesmoke;
+                font-size: 20px;
+            }
+            p.school {
+                color: hotpink;
+                font-size: 15px;
             }
         </style>
     </head>
@@ -118,15 +168,35 @@
                 </div>
             </div>
         </div>
+        <div class="contactme">
+            Social Media Handles:
+        </div>
         <div class="contact">
-            <div class="linked">
-                <a href="https://www.linkedin.com/in/amarachiuvere"><img src="LinkedIcon.png" class="icon"></a>
-            </div>
-            <div class="twitter">
-                <a href="https://x.com/4mie23"><img src="Xicon.png" class="icon"></a>
-            </div>
-            <div class="github">
-                <a href="https://github.com/Ano-ly"><img src="giticon.png" class="icon"></a>
+            <a href="https://www.linkedin.com/in/amarachiuvere">
+                <div class="linked">
+                    <img src="LinkedIcon.png" class="icon">
+                </div>
+            </a>
+            <a href="https://x.com/4mie23">
+                <div class="twitter">
+                    <img src="Xicon.png" class="icon">
+                </div>
+            </a>
+            <a href="https://github.com/Ano-ly">
+                <div class="github">
+                    <img src="giticon.png" class="icon">
+                </div>
+            </a>
+        </div>
+        <div class="edu">
+            <p class="edu">Education</p>
+            <div class="eduitem">
+                <p class="course">Certificate of Completion; Software Engineering</p>
+                <p class="school"><a href="https://www.alxafrica.com/">Alx Africa</a></p>
+                A 12-month Software Engineering Programme with specialisation in backend web development 
+                <div class="imgcert">
+                    <img src="alxcert.jpg" class="cert">
+                </div>
             </div>
         </div>
     </body>
