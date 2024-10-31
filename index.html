@@ -2,13 +2,15 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1 user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <title>My Portfolio</title>
         <link href="indexfile.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Warang+Citi&display=swap" rel="stylesheet">
         <style>
+            
             .noto-sans-warang-citi-regular {
                 font-family: "Noto Sans Warang Citi", sans-serif;
                 font-weight: 400;
@@ -22,10 +24,10 @@
                 background-color: black;
                 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             }
-            div.cont {
+            .cnt {
                 position: absolute;
                 height: 150px;
-                top: 2000px;
+                top: 2200px;
                 margin-top: 150px;
                 background-color: rgb(24, 22, 22);
                 padding-left: 20px;
@@ -33,36 +35,50 @@
                 color: antiquewhite;
                 font-size: 12px;
             }
-            div.contact {
+            .contact {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
                 position: absolute;
-                width: 95vw;
-                border-color: antiquewhite;
-                border-radius: 1px;
+                width: 90vw;
+                border: 1px solid antiquewhite;
+                border-radius: 7px;
                 top: 300px;
                 background-color: rgb(15, 14, 14);
+                box-shadow: 50px, -40px, 2px white;
                 color: white;
-                height: 100px;
+                height: 80px;
                 margin-top: 80px;
                 margin-bottom: 20px;
-                justify-content: center;
+                margin-left: 30px;
+                justify-content: space-around;
                 overflow-y: hidden;
+                padding-top: 20px;
+                padding-bottom: 20px;
             }
-            div.contact > div, div.contact > a {
+            .contact > div, div.contact > a {
                 background-color: rgb(39, 9, 68);
-                padding: 4%;
+                padding: 2%;
                 margin-left: 3%;
-                width: 18%;
+                width: 6%;
+                border-radius: 8px;
+                align-content: center;
             }
-            div.contact > div:hover, div.contact > a:hover {
+            .contact > div:hover, .contact > a:hover {
                 background-color: rgb(50, 11, 87);
                 border-style: groove;
                 border-width: 1px;
                 border-color: mediumpurple;
             }
-            div.contactme {
+            .contact__icon {
+                position: absolute;
+                top: 20%;
+                width: 4vw;
+                height: auto;
+                margin-left: 5px;
+                margin-top: 5px;
+            }
+            .contactme {
                 position: absolute;
                 top: 250px;
                 height: 30px;
@@ -71,21 +87,78 @@
                 margin-top: 70px;
                 padding-left: 20px;
             }
-            div.desc {
+            .intro__pic {
+                position: absolute;
+                width: 15%;
+                top: 12%;
+                height: 60%;
+                left: 3%;
+            }
+            .intro__info {
+                position: absolute;
+                width: 70vw;
+                background-color: rgb(255, 255, 255);
+                height: 150px;
+                padding: 10px;
+                padding-left: 8%;
+                border-radius: 5px;
+                left: 10%;
+                text-align: justify;
+                margin-left: 20px;
+                margin-top: 35px;
+            }
+            .intro {
+                position: absolute;
+                border: 1px solid white;
+                width: 95vw;
+                background-color: rgb(29, 6, 51);
+                height: 250px;
+                padding: 5px;
+                padding-top: 4px;
+                border-radius: 10px;
+            } 
+            @media only screen and (max-width:200px) {
+                div.intro {
+                    background-color: aliceblue;
+                }
+            }
+            
+            .intro__info__name {
+                position: absolute;
+                width: 90%;
+                height: 100px;
+                padding-left: 10px;
+                font-size: 2vw;
+                padding: 5px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            .intro__info__desc {
                 position: absolute;
                 width: 80%;
-                top: 100px;
+                top: 90px;
                 padding: 3px;
-                font-size: 0.8em;
+                font-size: 0.9vw;
                 text-overflow: ellipsis;
+                line-height: 1.3;
                 overflow-y: hidden;
-                margin-top: 20px;
-                text-wrap: wrap;
             }
-            div.edu {
+            .intro__pic__img {
                 position: absolute;
-                height: 400px;
-                top: 380px;
+                width: 12em;
+                max-width: 100%;
+                height: auto;
+                border-radius: 100%;
+                top: 0px;
+                z-index: 1;
+                border: 3px solid white;
+            }
+            .edu {
+                position: absolute;
+                height: 420px;
+                top: 400px;
                 margin-top: 120px;
                 background-color: rgb(24, 22, 22);
                 border-color: aliceblue;
@@ -94,157 +167,77 @@
                 width: 95vw;
                 z-index: 3;
             }
-            div.eduitem {
+            .edu__item__cert, .prj__item__icon {
                 position: absolute;
-                height: 150px;
+                height: 200px;
+                margin-top: 20px;
+            }
+            .edu__item, .prj__item {
+                position: absolute;
+                height: 170px;
                 border-width: 1px;
                 border-color: whitesmoke;
                 color: antiquewhite;
             }
-            div.eduitem2 {
-                top: 350px;
-                margin-top: 40px;
+            .edu__item__cert__img, .prj__item__icon__img {
                 position: absolute;
                 height: 150px;
-                border-width: 1px;
-                border-color: whitesmoke;
-                color: antiquewhite;
-            }
-            div.imgcert {
-                position: absolute;
-                height: 200px;
-                margin-top: 20px;
-            }
-            div.imgdiv {
-                position: absolute;
-                width: 15%;
-                top: 12%;
-                height: 60%;
-                left: 3%;
-            }
-            div.imgoptimal {
-                position: absolute;
-                height: 200px;
-                margin-top: 20px;
-            }
-            div.imgstylemate {
-                position: absolute;
-                height: 200px;
-                margin-top: 20px;
-            }
-            div.info {
-                position: absolute;
-                width: 70%;
-                background-color: rgb(255, 255, 255);
-                height: 180px;
-                padding: 10px;
-                padding-left: 12%;
-                border-radius: 5px;
-                left: 10%;
-                text-align: justify;
-                margin-left: 20px;
-                margin-top: 20px;
-            }
-            div.intro {
-                position: absolute;
-                width: 95vw;
-                background-color: rgb(29, 6, 51);
-                height: 250px;
-                padding: 5px;
-                padding-top: 4px;
-                border-radius: 10px;
-            } 
-            div.name {
-                position: absolute;
-                width: 90%;
-                height: 100px;
-                padding-left: 10px;
-                font-size: 2.5em;
-                padding: 5px;
-                text-overflow: ellipsis;
-                overflow: hidden;
-                margin-top: 30px;
-                margin-bottom: 20px;
-            }
-            div.project {
-                position: absolute;
-                height: 700px;
-                top: 750px;
-                margin-top: 200px;
-                background-color: rgb(24, 22, 22);
-                padding-left: 20px;
-                width: 95vw;
-            }
-            div.skill {
-                position: absolute;
-                height: 400px;
-                top: 1500px;
-                margin-top: 200px;
-                background-color: rgb(24, 22, 22);
-                padding-left: 20px;
-                width: 95vw;
-            }
-            img.cert {
-                height: 150px;
-                max-width: 100%;
                 top: 0px;
+                margin-top: 20px;
+                border-radius: 6px;
             }
-            img.icon {
-                position: absolute;
-                top: 20%;
-                height: 60px;
-            }
-            img.image {
-                position: absolute;
-                width: 12em;
-                max-width: 100%;
-                height: auto;
-                border-radius: 100%;
-                top: 0px;
-                z-index: 1;
-            }
-            img.image:hover {
-                width: 110%;
-                z-index: 2;
-            }
-            img.optimal {
-                height: 150px;
-                position: absolute;
-                top: 0px;
-            }
-            img.stylemate {
-                height: 150px;
-                position: absolute;
-                top: 0px;
-            }
-            p.course {
+            .edu__item__course, .prj__item__git {
                 color: whitesmoke;
                 font-size: 20px;
             }
-            p.edu {
+            .edu__p, .prj__p, .skl__p, .cnt__p {
                 color: whitesmoke;
                 font-size: 30px;
             }
-            p.lang {
-                color: whitesmoke;
-                font-size: 14px;
-            }
-            p.school {
+            .edu__item__school, .prj__item__blog {
                 color: hotpink;
                 font-size: 15px;
+            }
+            .prj__item2 {
+                top: 390px;
+                margin-top: 40px;
+            }   
+            .prj__item3 {
+                top: 660px;
+                margin-top: 40px;
+            }          
+            .prj {
+                position: absolute;
+                height: 1000px;
+                top: 770px;
+                margin-top: 200px;
+                background-color: rgb(24, 22, 22);
+                padding-left: 20px;
+                width: 95vw;
+            }
+            .skl {
+                position: absolute;
+                height: 420px;
+                top: 1800px;
+                margin-top: 200px;
+                background-color: rgb(24, 22, 22);
+                padding-left: 20px;
+                width: 95vw;
+            }           
+            .skl__lang {
+                color: whitesmoke;
+                font-size: 14px;
             }
         </style>
     </head>
     <body class="noto-sans-warang-citi-regular">
         <div class="intro">
-            <div class="imgdiv">
-                <img src="amarachiprofilepicture.jpg" class="image">
+            <div class="intro__pic">
+                <img src="amarachiprofilepicture.jpg" class="intro__pic__img">
             </div>
-            <div class="info">
-                <div class="name">
-                    Amarachi Uvere Catherine
-                </div>
-                <div class="desc">
+            <div class="intro__info">
+                <div class="intro__info__name">Amarachi Uvere Catherine</div>
+                <div class="intro__info__desc">
                     I am a Software Engineer and Full-Stack Web Developer with specialisation in Backend Web Development. I have a proven track record of delivering high-quality code and I have demonstrated the ability for collaborative teamwork, having worked hand-in-hand with several developer teams. 
                 </div>
             </div>
@@ -254,64 +247,72 @@
         </div>
         <div class="contact">
             <a href="https://www.linkedin.com/in/amarachiuvere">
-                <div class="linked">
-                    <img src="LinkedIcon.png" class="icon">
+                <div class="contact__lkd">
+                    <img src="LinkedIcon.png" class="contact__icon">
                 </div>
             </a>
             <a href="https://x.com/4mie23">
-                <div class="twitter">
-                    <img src="Xicon.png" class="icon">
+                <div class="contact__twt">
+                    <img src="Xicon.png" class="contact__icon">
                 </div>
             </a>
             <a href="https://github.com/Ano-ly">
-                <div class="github">
-                    <img src="giticon.png" class="icon">
+                <div class="contact__git">
+                    <img src="giticon.png" class="contact__icon">
                 </div>
             </a>
         </div>
         <div class="edu">
-            <p class="edu">Education</p>
-            <div class="eduitem">
-                <p class="course">Certificate of Completion; Software Engineering</p>
-                <p class="school"><a href="https://www.alxafrica.com/">Alx Africa</a></p>
+            <p class="edu__p">Education</p>
+            <div class="edu__item">
+                <p class="edu__item__course">Certificate of Completion; Software Engineering</p>
+                <p class="edu__item__school"><a href="https://www.alxafrica.com/">Alx Africa</a></p>
                 A 12-month Software Engineering Programme with specialisation in backend web development 
-                <div class="imgcert">
-                    <img src="alxcert.jpg" class="cert">
+                <div class="edu__item__cert">
+                    <img src="alxcert.jpg" class="edu__item__cert__img">
                 </div>
             </div>
         </div>
-        <div class="project">
-            <p class="edu">Projects</p>
-            <div class="eduitem">
-                <p class="course"><a href="https://github.com/Fortune-0/Stylemate">Stylemate</a></p>
-                <p class="school"><a href="https://medium.com/@amarachiuvere/how-i-developed-my-very-first-web-application-ever-stylemate-82ef7f087e86?source=user_profile---------3----------------------------">Blog Post</a></p>
+        <div class="prj">
+            <p class="prj__p">Projects</p>
+            <div class="prj__item">
+                <p class="prj__item__git"><a href="https://github.com/Fortune-0/Stylemate">Stylemate</a></p>
+                <p class="prj__item__blog"><a href="https://medium.com/@amarachiuvere/how-i-developed-my-very-first-web-application-ever-stylemate-82ef7f087e86?source=user_profile---------3----------------------------">Blog Post</a></p>
                 A simple, and easy-to-use web application that generates outfit styling recommendations for college students
-                <div class="imgstylemate">
-                    <img src="Stylemate.jpg" class="stylemate">
+                <div class="prj__item__icon">
+                    <img src="Stylemate.jpg" class="prj__item__icon__img">
                 </div>
             </div>
-            <div class="eduitem2">
-                <p class="course"><a href="https://github.com/Ano-ly/Optimal-Planner">Optimal Planner</a></p>
+            <div class="prj__item prj__item2">
+                <p class="prj__item__git"><a href="https://github.com/Ano-ly/Optimal-Planner">Optimal Planner</a></p>
                 An event-planning web application that allows for easy event planning and management
-                <div class="imgoptimal">
-                    <img src="opplanner.jpg" class="optimal">
+                <div class="prj__item__icon">
+                    <img src="opplanner.jpg" class="prj__item__icon__img">
+                </div>
+            </div>
+            <div class="prj__item prj__item3">
+                <p class="prj__item__git"><a href="https://github.com/Ano-ly/Vote_Secure">VoteSecure</a></p>
+                A voting platform that leverages the decentralised nature of the Internet Computer Blockchain for transparent elections.
+                <div class="prj__item__icon">
+                    <img src="votesecureimg.png" class="prj__item__icon__img">
                 </div>
             </div>
         </div>
-        <div class="skill">
-            <p class="edu">Skills/Coding Languages</p>
-                <p class="lang">Python</p>
-                <p class="lang">C</p>
-                <p class="lang">HTML</p>
-                <p class="lang">CSS</p>
-                <p class="lang">Javascript</p>
-                <p class="lang">MySQL</p>
-                <p class="lang">Redis</p>
-                <p class="lang">MongoDB</p>
-                <p class="lang">DevOps</p>
+        <div class="skl">
+            <p class="skl__p">Skills/Coding Languages</p>
+            <p class="skl__lang">Python</p>
+            <p class="skl__lang">C</p>
+            <p class="skl__lang">CSS</p>
+            <p class="skl__lang">DevOps</p>
+            <p class="skl__lang">HTML</p>
+            <p class="skl__lang">Javascript</p>
+            <p class="skl__lang">MongoDB</p>
+            <p class="skl__lang">Motoko</p>
+            <p class="skl__lang">MySQL</p>
+            <p class="skl__lang">Redis</p>
         </div>
-        <div class="cont">
-            <p class="edu">Contact me</p>
+        <div class="cnt">
+            <p class="cnt__p">Contact me</p>
             <p>Email: amarachiuvere@gmail.com</p>
             <p>Phone Number: +234 902 189 6581</p>
         </div>
