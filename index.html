@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My Portfolio</title>
         <link href="indexfile.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,6 +20,7 @@
             body {
                 padding: 5px;
                 background-color: black;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             }
             div.cont {
                 position: absolute;
@@ -184,7 +186,7 @@
             }
             img.cert {
                 height: 150px;
-                position: absolute;
+                max-width: 100%;
                 top: 0px;
             }
             img.icon {
@@ -195,6 +197,8 @@
             img.image {
                 position: absolute;
                 width: 12em;
+                max-width: 100%;
+                height: auto;
                 border-radius: 100%;
                 top: 0px;
                 z-index: 1;
