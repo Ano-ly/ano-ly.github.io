@@ -237,14 +237,14 @@
             }
             html, body {
                 height: 100vh;
-                max-width: 100vw;
+                max-width: 200vw;
+                font-size: 16px;
                 overflow-x: hidden;
             }
             a {
                 color: blueviolet;
             }
             body {
-                font-size: 16px;
                 padding: 7px;
                 background-color: black;
                 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -252,6 +252,7 @@
             }
             main {
                 padding-top: 1em;
+                padding-bottom: 3rem;
                 width: 100%;
                 display: flex;
                 flex-direction: column;
@@ -259,38 +260,44 @@
                 box-sizing: border-box;
                 align-items: center;
                 justify-content: center;
-                gap: 4rem;
+                gap: 2rem;
                 min-height: 100vh;
             }
             .cnt {
                 display: flex;
+                flex-direction: column;
                 box-sizing: border-box;
-                position: absolute;
+                font-size: 0.6rem;
                 background-color: rgb(24, 22, 22);
                 color: antiquewhite;
-                font-size: 12px;
+                font-size: 0.5rem;
+                padding: 2rem;
             }
             .contact {
                 box-sizing: border-box;
                 display: flex;
                 flex-direction: row;
+                gap: 1em;
                 flex-wrap: wrap;
                 border: 1px solid antiquewhite;
                 border-radius: 7px;
+                padding: 2em;
                 background-color: rgb(15, 14, 14);
                 box-shadow: 50px, -40px, 2px white;
                 color: white;
-                justify-content: space-around;
+                justify-content: center;
                 overflow-y: hidden;
             }
-            .contact > div, div.contact > a {
+            a.contact__link {
+                display: block;
+                width: 100%;
+            }
+            .contact > div {
                 box-sizing: border-box;
                 background-color: rgb(39, 9, 68);
-                padding: 2%;
-                margin-left: 3%;
-                width: 6%;
-                border-radius: 8px;
+                border-radius: 0.5rem;
                 align-content: center;
+                padding: 0.2em;
             }
             .contact > div:hover, .contact > a:hover {
                 box-sizing: border-box;
@@ -301,20 +308,13 @@
             }
             .contact__icon {
                 box-sizing: border-box;
-                position: absolute;
-                top: 20%;
-                width: 4vw;
-                height: auto;
-                margin-left: 5px;
-                margin-top: 5px;
+                width: 2rem;
             }
-            .contactme {
+            .aboutme {
                 display: flex;
                 box-sizing: border-box;
-                font-size: 20px;
-                color: white;
-                margin-top: 70px;
-                padding-left: 20px;
+                font-size: 1.3rem;
+                color: gainsboro
             }
             .intro {
                 display: flex;
@@ -324,8 +324,8 @@
                 gap: 3rem;
                 align-items: center;
                 /*height: auto;*/
-                border: 0.05rem solid white;
-                background-color: rgb(29, 6, 51);
+                border: 0.02rem solid rgb(109, 102, 125);
+                background-color: rgb(53, 46, 59);
                 padding: 3rem;
                 border-radius: 0.5rem;
                 z-index: 10;
@@ -382,35 +382,46 @@
                 border: 3px solid white;
             }
             .edu {
+                border-radius: 3rem;
+                line-height: 1.5rem;
                 display: flex;
+                flex-direction: column;
                 box-sizing: border-box;
+                padding: 1rem;
+                padding-bottom: 3rem;
                 background-color: rgb(24, 22, 22);
                 border-color: aliceblue;
-                border-width: 10px;
-                padding-left: 20px;
+                border-width: 0.6rem;
+                width: 100%;
                 z-index: 3;
             }
             .edu__item__cert, .prj__item__icon {
                 display: flex;
+                flex-direction: column;
                 box-sizing: border-box;
-                height: 40em;
-                margin-top: 20px;
+                padding-top: 2rem;
+                padding-bottom: 2rem;
             }
             .edu__item, .prj__item {
                 display: flex;
+                flex-direction: column;
+                padding: 0.2rem;
+                font-size: 0.9rem;
                 box-sizing: border-box;
-                border-width: 1px;
+                border-width: 0.05rem;
                 border-color: whitesmoke;
+                border-radius: 3rem;
                 color: antiquewhite;
             }
             .edu__item__cert__img, .prj__item__icon__img {
                 box-sizing: border-box;
-                width: 80%;
-                top: 0px;
-                margin-top: 20px;
-                border-radius: 6px;
+                width: 10rem;
+                border-radius: 0.4px;
+                box-shadow: 0.25rem 0.25rem 0.25rem rgb(0, 0, 0);
             }
             .edu__item__course, .prj__item__git {
+                padding-bottom: 0.5rem;
+                font-size: 0.9rem;
                 display: flex;
                 box-sizing: border-box;
                 color: whitesmoke;
@@ -420,7 +431,7 @@
                 display: flex;
                 box-sizing: border-box;
                 color: whitesmoke;
-                font-size: 30px;
+                font-size: 1.5rem;
             }
             .edu__item__school, .prj__item__blog {
                 display: flex;
@@ -438,24 +449,46 @@
                 margin-top: 40px;
                 box-sizing: border-box;
             }          
+            .prj__item__role {
+                padding-top: 1rem;
+                font-size: 0.7rem;
+                color: rgb(185, 120, 246);
+            }
+            .prj__item__tch {
+                font-size: 0.7rem;
+                color: rgb(240, 225, 253);
+            }
+
             .prj {
+                line-height: 1.5rem;
+                font-size: 0.7rem;
                 display: flex;
+                flex-direction: column;
                 box-sizing: border-box;
+                padding: 1.5rem;
                 background-color: rgb(24, 22, 22);
-                padding-left: 20px;
+                border-color: aliceblue;
+                border-radius: 3rem;
+                border-width: 0.6rem;
+                padding-bottom: 3rem;
+                gap: 0.8rem;
                 z-index: 3;
             }
             .skl {
+                font-size: 0.7rem;
+                border-radius: 3rem;
                 display: flex;
+                flex-direction: column;
                 box-sizing: border-box;
-                margin-top: 200px;
                 background-color: rgb(24, 22, 22);
-                padding-left: 20px;
+                padding: 1.5rem;
+                padding-bottom: 2.5rem;
+                padding-left: 1.5rem;
+                width: 100%;
             }           
             .skl__lang {
                 display: flex;
                 color: whitesmoke;
-                font-size: 14px;
                 box-sizing: border-box;
             }
 
@@ -475,26 +508,10 @@
                     </div>
                 </div>
             </div>
-            <div class="contactme">
-                Social Media Handles:
+            <div class="aboutme">
+                About Me
             </div>
-            <div class="contact">
-                <a href="https://www.linkedin.com/in/amarachiuvere">
-                    <div class="contact__lkd">
-                        <img src="LinkedIcon.png" class="contact__icon">
-                    </div>
-                </a>
-                <a href="https://x.com/4mie23">
-                    <div class="contact__twt">
-                        <img src="Xicon.png" class="contact__icon">
-                    </div>
-                </a>
-                <a href="https://github.com/Ano-ly">
-                    <div class="contact__git">
-                        <img src="giticon.png" class="contact__icon">
-                    </div>
-                </a>
-            </div>
+        
             <div class="edu">
                 <p class="edu__p">Education</p>
                 <div class="edu__item">
@@ -515,24 +532,30 @@
                     <div class="prj__item__icon">
                         <img src="Stylemate.jpg" class="prj__item__icon__img">
                     </div>
+                    <div class="prj__item__role">Roles: Full-Stack Developer, Team Lead</div>
+                    <div class="prj__item__tch">Technologies Used: Python, MySQL, Flask, HTML, CSS, Javascript</div>
                 </div>
-                <div class="prj__item prj__item2">
+                <div class="prj__item">
                     <p class="prj__item__git"><a href="https://github.com/Ano-ly/Optimal-Planner">Optimal Planner</a></p>
                     An event-planning web application that allows for easy event planning and management
                     <div class="prj__item__icon">
                         <img src="opplanner.jpg" class="prj__item__icon__img">
                     </div>
+                    <div class="prj__item__role">Roles: Backend Developer, Team Lead</div>
+                    <div class="prj__item__tch">Technologies Used: Python, MySQL, Flask</div>
                 </div>
-                <div class="prj__item prj__item3">
+                <div class="prj__item">
                     <p class="prj__item__git"><a href="https://github.com/Ano-ly/Vote_Secure">VoteSecure</a></p>
                     A voting platform that leverages the decentralised nature of the Internet Computer Blockchain for transparent elections.
                     <div class="prj__item__icon">
                         <img src="votesecureimg.png" class="prj__item__icon__img">
                     </div>
+                    <div class="prj__item__role">Role: Back-End Developer</div>
+                    <div class="prj__item__tch">Technologies Used: Motoko, ICP</div>
                 </div>
             </div>
             <div class="skl">
-                <p class="skl__p">Skills/Coding Languages</p>
+                <p class="skl__p">Skills/ Technologies</p>
                 <p class="skl__lang">Python</p>
                 <p class="skl__lang">C</p>
                 <p class="skl__lang">CSS</p>
@@ -543,6 +566,20 @@
                 <p class="skl__lang">Motoko</p>
                 <p class="skl__lang">MySQL</p>
                 <p class="skl__lang">Redis</p>
+            </div>
+            <div class="contact">
+                <div class="contact__lkd">
+                    <a class="contact__link" href="https://www.linkedin.com/in/amarachiuvere"></a>
+                    <img src="LinkedIcon.png" class="contact__icon">
+                </div>
+                <div class="contact__twt">
+                    <a class="contact__link" href="https://x.com/4mie23"></a>
+                    <img src="Xicon.png" class="contact__icon">
+                </div>
+                <div class="contact__git">
+                    <a class="contact__link" href="https://github.com/Ano-ly"></a>
+                    <img src="giticon.png" class="contact__icon">
+                </div>
             </div>
             <div class="cnt">
                 <p class="cnt__p">Contact me</p>
