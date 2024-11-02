@@ -488,7 +488,7 @@
                 gap: 1rem;
                 color: antiquewhite;
                 max-width: 100%;
-                padding-bottom: 1rem;
+                padding-bottom: 0.5rem;
                 padding-top: 1.5rem;
             }
             .val__tro {
@@ -504,6 +504,7 @@
                 padding-top: 1.5rem;
                 padding-bottom: 1.5rem;
                 border-radius: 1rem;
+                transition: padding-top 1s;
             }
             .val__vals__vl {
                 display: flex;
@@ -540,8 +541,7 @@
                     <div class="val__vals__vl">Openmindedness</div>
                 </div>
             </div>
-            <div class="edu divpad">
-                <p class="edu__p">Education</p>
+            <div class="edu">
                 <div class="edu__item">
                     <p class="edu__item__course">Certificate of Completion; Software Engineering</p>
                     <p class="edu__item__school"><a href="https://www.alxafrica.com/">Alx Africa</a></p>
@@ -551,7 +551,7 @@
                     </div>
                 </div>
             </div>
-            <div class="prj divpad">
+            <div class="prj">
                 <p class="prj__p">Projects</p>
                 <div class="prj__item">
                     <p class="prj__item__git"><a href="https://github.com/Fortune-0/Stylemate">Stylemate</a></p>
@@ -582,7 +582,7 @@
                     <div class="prj__item__tch">Technologies Used: Motoko, ICP</div>
                 </div>
             </div>
-            <div class="skl divpad">
+            <div class="skl">
                 <p class="skl__p">Skills/ Technologies</p>
                 <p class="skl__lang">Python</p>
                 <p class="skl__lang">C</p>
@@ -637,5 +637,16 @@
             });
         });
         observeskl.observe(document.querySelector('.contact'));
+
+        const observeval = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.paddingTop = "1.5rem";
+                } else {
+                    entry.target.style.paddingTop = "4rem";
+                }
+            });
+        });
+        observeval.observe(document.querySelector('.val__vals'));
     </script>
 </html>
