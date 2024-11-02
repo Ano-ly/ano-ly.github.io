@@ -279,11 +279,11 @@
                 flex-direction: row;
                 gap: 1em;
                 flex-wrap: wrap;
-                border: 1px solid antiquewhite;
-                border-radius: 7px;
-                padding: 0.5rem;
+                border: 0.07rem solid antiquewhite;
+                border-radius: 0.5rem;
+                padding: 1.5rem;
                 background-color: rgb(15, 14, 14);
-                box-shadow: 50px, -40px, 2px white;
+                box-shadow: 3rem, -2.5rem, 0.125rem white;
                 color: white;
                 justify-content: center;
                 overflow-y: hidden;
@@ -298,13 +298,13 @@
                 background-color: rgb(39, 9, 68);
                 border-radius: 0.5rem;
                 align-content: center;
-                padding: 0.2em;
+                padding: 0.2rem;
             }
             .contact > div:hover, .contact > a:hover {
                 box-sizing: border-box;
                 background-color: rgb(50, 11, 87);
                 border-style: groove;
-                border-width: 1px;
+                border-width: 0.07rem;
                 border-color: mediumpurple;
             }
             .contact__icon {
@@ -313,6 +313,8 @@
             }
             .aboutme {
                 display: flex;
+                align-items: center;
+                justify-content: center;
                 box-sizing: border-box;
                 font-size: 1.3rem;
                 color: gainsboro
@@ -329,11 +331,12 @@
                 background-color: rgb(53, 46, 59);
                 padding: 3rem;
                 border-radius: 0.5rem;
-                z-index: 10;
             } 
             .intro__pic {
                 display: flex;
-                box-sizing: border-box;                
+                box-sizing: border-box;    
+                align-items: center;         
+                justify-content: center;   
             }
             .intro__info {
                 display: flex;
@@ -345,7 +348,6 @@
                 border-radius: 2rem;
                 text-align: center;
                 color: black;
-                /*margin-left: 20px;*/
                 background-color: white;
             }
            
@@ -355,14 +357,13 @@
                 font-weight: 900;
                 font-size: 1.2rem;
                 color: black;
-                padding: 5px;
+                padding: 0.3rem;
                 text-overflow: ellipsis;
                 text-align: center;
                 overflow: hidden;
-                margin-bottom: 20px;
+                margin-bottom: 1.1rem;
             }
             .intro__info__desc {
-                display: flex;
                 box-sizing: border-box;
                 font-size: 0.9rem;
                 text-overflow: ellipsis;
@@ -376,11 +377,7 @@
                 max-width: 100%;
                 height: auto;
                 border-radius: 100%;
-                margin-left: 15%;
-                margin-right: 15%;
-                top: 0px;
-                z-index: 1;
-                border: 3px solid white;
+                border: 0.25rem solid white;
             }
             .edu {
                 border-radius: 3rem;
@@ -393,9 +390,8 @@
                 border-color: aliceblue;
                 border-width: 0.6rem;
                 width: 100%;
-                z-index: 3;
                 transition: padding 1s;
-                padding: 6rem;
+                padding: 4rem;
             }
             .edu__item__cert, .prj__item__icon {
                 display: flex;
@@ -418,7 +414,7 @@
             .edu__item__cert__img, .prj__item__icon__img {
                 box-sizing: border-box;
                 width: 10rem;
-                border-radius: 0.4px;
+                border-radius: 0.02rem;
                 box-shadow: 0.25rem 0.25rem 0.25rem rgb(0, 0, 0);
             }
             .edu__item__course, .prj__item__git {
@@ -439,18 +435,7 @@
                 display: flex;
                 box-sizing: border-box;
                 color: hotpink;
-                font-size: 15px;
             }
-            .prj__item2 {
-                display: flex;
-                margin-top: 40px;
-                box-sizing: border-box;
-            }   
-            .prj__item3 {
-                display: flex;
-                margin-top: 40px;
-                box-sizing: border-box;
-            }          
             .prj__item__role {
                 padding-top: 1rem;
                 font-size: 0.7rem;
@@ -475,7 +460,7 @@
                 gap: 0.8rem;
                 z-index: 3;
                 transition: padding 1s;
-                padding: 6rem;
+                padding: 4rem;
             }
             .skl {
                 font-size: 0.7rem;
@@ -487,7 +472,7 @@
                 padding-bottom: 2.5rem;
                 padding-left: 1.5rem;
                 transition: padding 1s;
-                padding: 6rem;
+                padding: 4rem;
                 width: 100%;
             }           
             .skl__lang {
@@ -506,14 +491,16 @@
                 <div class="intro__info">
                     <div class="intro__info__name">Amarachi Uvere Catherine</div>
                     <div class="intro__info__desc">
-                        I am a Software Engineer and Full-Stack Web Developer with specialisation in Backend Web Development. I have a proven track record of delivering high-quality code and I have demonstrated the ability for collaborative teamwork, having worked hand-in-hand with several developer teams. 
+                        I am a <span style="display:inline; color:rgb(185, 120, 246);">Software Engineer</span> and Full-Stack Web Developer with a specialisation in <span style="display:inline; color:rgb(185, 120, 246);">Back-End Web Development</span>
                     </div>
                 </div>
             </div>
             <div class="aboutme">
-                About Me
+                Learn More About Me
             </div>
-        
+            <div class="val">
+                <div class="val__tro"></div>
+            </div>
             <div class="edu divpad">
                 <p class="edu__p">Education</p>
                 <div class="edu__item">
@@ -571,16 +558,13 @@
             </div>
             <div class="contact">
                 <div class="contact__lkd">
-                    <a class="contact__link" href="https://www.linkedin.com/in/amarachiuvere"></a>
-                    <img src="LinkedIcon.png" class="contact__icon">
+                    <a class="contact__link" href="https://www.linkedin.com/in/amarachiuvere"><img src="LinkedIcon.png" class="contact__icon"></a>
                 </div>
                 <div class="contact__twt">
-                    <a class="contact__link" href="https://x.com/4mie23"></a>
-                    <img src="Xicon.png" class="contact__icon">
+                    <a class="contact__link" href="https://x.com/4mie23"><img src="Xicon.png" class="contact__icon"></a>
                 </div>
                 <div class="contact__git">
-                    <a class="contact__link" href="https://github.com/Ano-ly"></a>
-                    <img src="giticon.png" class="contact__icon">
+                    <a class="contact__link" href="https://github.com/Ano-ly"><img src="giticon.png" class="contact__icon"></a>
                 </div>
             </div>
             <div class="cnt">
@@ -596,7 +580,7 @@
                 if (entry.isIntersecting) {
                     entry.target.style.padding = "1.5rem";
                 } else {
-                    entry.target.style.padding = "3rem";
+                    entry.target.style.padding = "4rem";
                 }
             });
         });
@@ -609,7 +593,7 @@
                 if (entry.isIntersecting) {
                     entry.target.style.padding = "2rem";
                 } else {
-                    entry.target.style.padding = "0.5rem";
+                    entry.target.style.padding = ".5rem";
                 }
             });
         });
