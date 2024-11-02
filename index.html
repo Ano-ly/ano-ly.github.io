@@ -311,7 +311,9 @@
                 box-sizing: border-box;
                 width: 2rem;
             }
+    
             .aboutme {
+                padding-top: 1rem;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -480,6 +482,37 @@
                 color: whitesmoke;
                 box-sizing: border-box;
             }
+            .val {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                color: antiquewhite;
+                max-width: 100%;
+                padding-bottom: 1rem;
+                padding-top: 1.5rem;
+            }
+            .val__tro {
+                padding-left: 1rem;
+            }
+            .val__vals {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                flex-direction: row;
+                gap: 1rem;
+                background-color: rgb(24, 22, 22);
+                padding: 1rem;
+                padding-top: 1.5rem;
+                padding-bottom: 1.5rem;
+                border-radius: 1rem;
+            }
+            .val__vals__vl {
+                display: flex;
+                flex-direction: column;
+                padding: 1rem;
+                text-align: center;
+                text-overflow: clip;
+                border: 0.1rem solid white;
+            }
         </style>
     </head>
     <body class="noto-sans-warang-citi-regular">
@@ -499,7 +532,13 @@
                 Learn More About Me
             </div>
             <div class="val">
-                <div class="val__tro"></div>
+                <div class="val__tro">I value:</div>
+                <div class="val__vals">
+                    <div class="val__vals__vl">Teamwork</div>
+                    <div class="val__vals__vl">Discipline</div>
+                    <div class="val__vals__vl">Creativity</div>
+                    <div class="val__vals__vl">Openmindedness</div>
+                </div>
             </div>
             <div class="edu divpad">
                 <p class="edu__p">Education</p>
