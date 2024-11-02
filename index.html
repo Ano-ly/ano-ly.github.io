@@ -281,12 +281,13 @@
                 flex-wrap: wrap;
                 border: 1px solid antiquewhite;
                 border-radius: 7px;
-                padding: 2em;
+                padding: 0.5rem;
                 background-color: rgb(15, 14, 14);
                 box-shadow: 50px, -40px, 2px white;
                 color: white;
                 justify-content: center;
                 overflow-y: hidden;
+                transition: padding 1s;
             }
             a.contact__link {
                 display: block;
@@ -387,13 +388,14 @@
                 display: flex;
                 flex-direction: column;
                 box-sizing: border-box;
-                padding: 1rem;
                 padding-bottom: 3rem;
                 background-color: rgb(24, 22, 22);
                 border-color: aliceblue;
                 border-width: 0.6rem;
                 width: 100%;
                 z-index: 3;
+                transition: padding 1s;
+                padding: 6rem;
             }
             .edu__item__cert, .prj__item__icon {
                 display: flex;
@@ -465,7 +467,6 @@
                 display: flex;
                 flex-direction: column;
                 box-sizing: border-box;
-                padding: 1.5rem;
                 background-color: rgb(24, 22, 22);
                 border-color: aliceblue;
                 border-radius: 3rem;
@@ -473,6 +474,8 @@
                 padding-bottom: 3rem;
                 gap: 0.8rem;
                 z-index: 3;
+                transition: padding 1s;
+                padding: 6rem;
             }
             .skl {
                 font-size: 0.7rem;
@@ -481,9 +484,10 @@
                 flex-direction: column;
                 box-sizing: border-box;
                 background-color: rgb(24, 22, 22);
-                padding: 1.5rem;
                 padding-bottom: 2.5rem;
                 padding-left: 1.5rem;
+                transition: padding 1s;
+                padding: 6rem;
                 width: 100%;
             }           
             .skl__lang {
@@ -491,8 +495,6 @@
                 color: whitesmoke;
                 box-sizing: border-box;
             }
-
-
         </style>
     </head>
     <body class="noto-sans-warang-citi-regular">
@@ -512,7 +514,7 @@
                 About Me
             </div>
         
-            <div class="edu">
+            <div class="edu divpad">
                 <p class="edu__p">Education</p>
                 <div class="edu__item">
                     <p class="edu__item__course">Certificate of Completion; Software Engineering</p>
@@ -523,7 +525,7 @@
                     </div>
                 </div>
             </div>
-            <div class="prj">
+            <div class="prj divpad">
                 <p class="prj__p">Projects</p>
                 <div class="prj__item">
                     <p class="prj__item__git"><a href="https://github.com/Fortune-0/Stylemate">Stylemate</a></p>
@@ -554,7 +556,7 @@
                     <div class="prj__item__tch">Technologies Used: Motoko, ICP</div>
                 </div>
             </div>
-            <div class="skl">
+            <div class="skl divpad">
                 <p class="skl__p">Skills/ Technologies</p>
                 <p class="skl__lang">Python</p>
                 <p class="skl__lang">C</p>
@@ -588,4 +590,29 @@
             </div>
         </main>
     </body>
+    <script>
+        const observediv = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.padding = "1.5rem";
+                } else {
+                    entry.target.style.padding = "3rem";
+                }
+            });
+        });
+        document.querySelectorAll('.prj, .edu, .skl').forEach(element => {
+            observediv.observe(element);
+        });
+
+        const observeskl = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.padding = "2rem";
+                } else {
+                    entry.target.style.padding = "0.5rem";
+                }
+            });
+        });
+        observeskl.observe(document.querySelector('.contact'));
+    </script>
 </html>
