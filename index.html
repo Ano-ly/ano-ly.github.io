@@ -438,16 +438,6 @@
                 box-sizing: border-box;
                 color: hotpink;
             }
-            .prj__item__role {
-                padding-top: 1rem;
-                font-size: 0.7rem;
-                color: rgb(185, 120, 246);
-            }
-            .prj__item__tch {
-                font-size: 0.7rem;
-                color: rgb(240, 225, 253);
-            }
-
             .prj {
                 line-height: 1.5rem;
                 font-size: 0.7rem;
@@ -463,6 +453,31 @@
                 z-index: 3;
                 transition: padding 1s;
                 padding: 4rem;
+            }
+            .prj__item__role {
+                padding-top: 1rem;
+                font-size: 0.7rem;
+                color: rgb(185, 120, 246);
+            }
+            .prj__item__tch {
+                font-size: 0.7rem;
+                color: rgb(240, 225, 253);
+            }
+            .prj__item__logo {
+                padding-top: 0.4rem;
+                display: flex;
+                flex-direction: row;
+                gap: 0.7rem;
+                transition: gap 1s;
+                transition-delay: 1s;
+            }
+            .prj__item__logo__img {
+                border-radius: 0.5rem;
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+            .add-bottom-padding {
+                padding-bottom: 2rem;
             }
             .skl {
                 font-size: 0.7rem;
@@ -562,6 +577,14 @@
                     </div>
                     <div class="prj__item__role">Roles: Full-Stack Developer, Team Lead</div>
                     <div class="prj__item__tch">Technologies Used: Python, MySQL, Flask, HTML, CSS, Javascript</div>
+                    <div class="prj__item__logo">
+                        <img src="pythonicon.webp" class="prj__item__logo__img">
+                        <img src="mysqlicon.png" class="prj__item__logo__img">
+                        <img src="flaskicon.png" class="prj__item__logo__img">
+                        <img src="htmlicon.png" class="prj__item__logo__img">
+                        <img src="cssicon.png" class="prj__item__logo__img">
+                        <img src="javascriptimg.jpg" class="prj__item__logo__img">
+                    </div>
                 </div>
                 <div class="prj__item">
                     <p class="prj__item__git"><a href="https://github.com/Ano-ly/Optimal-Planner">Optimal Planner</a></p>
@@ -571,6 +594,11 @@
                     </div>
                     <div class="prj__item__role">Roles: Backend Developer, Team Lead</div>
                     <div class="prj__item__tch">Technologies Used: Python, MySQL, Flask</div>
+                    <div class="prj__item__logo">
+                        <img src="pythonicon.webp" class="prj__item__logo__img">
+                        <img src="mysqlicon.png" class="prj__item__logo__img">
+                        <img src="flaskicon.png" class="prj__item__logo__img">
+                    </div>
                 </div>
                 <div class="prj__item">
                     <p class="prj__item__git"><a href="https://github.com/Ano-ly/Vote_Secure">VoteSecure</a></p>
@@ -580,6 +608,10 @@
                     </div>
                     <div class="prj__item__role">Role: Back-End Developer</div>
                     <div class="prj__item__tch">Technologies Used: Motoko, ICP</div>
+                    <div class="prj__item__logo add-bottom-padding">
+                        <img src="motokoicon.jpg" class="prj__item__logo__img">
+                        <img src="icpicon.jpg" class="prj__item__logo__img">
+                    </div>
                 </div>
             </div>
             <div class="skl">
@@ -648,5 +680,18 @@
             });
         });
         observeval.observe(document.querySelector('.val__vals'));
+
+        const observelogo = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.gap = "0.7rem";
+                } else {
+                    entry.target.style.gap = "1rem";
+                }
+            });
+        });
+        document.querySelectorAll('.prj__item__logo').forEach(element => {
+            observelogo.observe(element);
+        });
     </script>
 </html>
