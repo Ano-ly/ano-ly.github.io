@@ -56,6 +56,7 @@
                 background-color: rgb(24, 22, 22);
                 color: antiquewhite;
                 padding: 2rem;
+                padding-top: 1rem;
             }
             .contact {
                 box-sizing: border-box;
@@ -120,6 +121,7 @@
             } 
             .intro__pic {
                 display: flex;
+                flex-direction: row;
                 box-sizing: border-box;    
                 align-items: center;         
                 justify-content: center;   
@@ -161,8 +163,8 @@
             }
             .intro__pic__img {
                 box-sizing: border-box;
-                height: 15rem; 
-                width: auto;
+                height: 12rem; 
+                width: 12rem;
                 max-width: 100%;
                 border-radius: 100%;
                 border: 0.25rem solid white;
@@ -199,13 +201,19 @@
             .edu__item, .prj__item {
                 display: flex;
                 flex-direction: column;
+                justify-content: center;
+                line-height: 1.5rem;
                 padding: 0.2rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                padding-bottom: 1rem;
                 font-size: 0.9rem;
                 box-sizing: border-box;
                 border-width: 0.05rem;
                 border-color: whitesmoke;
-                border-radius: 3rem;
+                border-radius: 0.3rem;
                 color: antiquewhite;
+                background-color: rgb(38, 35, 35);
             }
             .edu__item__cert__img, .prj__item__icon__img {
                 box-sizing: border-box;
@@ -215,7 +223,7 @@
             }
             .edu__item__course, .prj__item__tle {
                 padding-bottom: 0.5rem;
-                font-size: 0.9rem;
+                font-size: 0.8rem;
                 display: flex;
                 box-sizing: border-box;
                 color: whitesmoke;
@@ -225,7 +233,7 @@
                 display: flex;
                 box-sizing: border-box;
                 color: whitesmoke;
-                font-size: 1.5rem;
+                font-size: 1.2rem;
             }
             .edu__item__school, .prj__item__blog {
                 display: flex;
@@ -245,7 +253,7 @@
                 border-color: aliceblue;
                 border-radius: 3rem;
                 border-width: 0.6rem;
-                padding-bottom: 3rem;
+                padding-bottom: 4rem;
                 gap: 1.5rem;
                 z-index: 3;
                 transition: padding-top 1s;
@@ -286,6 +294,7 @@
                 font-size: 0.7rem;
                 border-radius: 3rem;
                 display: flex;
+                gap: 1.5rem;
                 flex-direction: column;
                 box-sizing: border-box;
                 background-color: rgb(24, 22, 22);
@@ -301,6 +310,10 @@
                 display: flex;
                 color: whitesmoke;
                 box-sizing: border-box;
+                padding: 0.5rem;
+                border-radius: 0.3rem;
+                background-color: rgb(38, 35, 35);
+                width: max-content;
             }
             .val {
                 display: flex;
@@ -328,7 +341,7 @@
             .val__vals__vl {
                 display: flex;
                 flex-direction: column;
-                padding: 1rem;
+                padding: 0.5rem;
                 text-align: center;
                 text-overflow: clip;
                 border: 0.1rem solid white;
@@ -343,31 +356,48 @@
                 .intro {
                     flex-direction: row;
                     width: 100%;
-                    justify-content: flex-start;
+                    gap: 1rem;
                 }
                 .intro__info {
                     justify-content: left;
+                    border-radius: 1rem;
+                }
+                .intro__pic {
+                    height: 8rem; 
+                    width: 8rem;
                 }
                 .intro__pic__img {
-                    height: 15rem; 
-                    width: auto;
+                    height: 8rem; 
+                    width: 8rem;
                 }
                 .val {
                     width: 100%;
-                }
+                } 
                 .val__vals {
                     justify-content: center;
                     display: flex;
                     flex-direction: row;
-                    gap: 4rem;
+                    gap: 3rem;
                 }
                 .val__vals__vl {
                     padding: 1rem;
-                    padding-left: 4rem;
-                    padding-right: 4rem;
+                    padding-left: 2rem;
+                    padding-right: 2rem;
                     border-radius: 1rem;
+                    font-size: 0.9rem;
                 }
-
+                .edu__item, .prj__item {
+                    padding-left: 1.5rem;
+                }
+                .cnt {
+                    border-radius: 3rem;
+                }
+                .edu__p, .prj__p, .skl__p, .cnt__p {
+                    font-size: 1.5rem;
+                }
+                .edu__item__course, .prj__item__tle {
+                    font-size: 1rem;
+                }
             }
         </style>
     </head>
@@ -378,7 +408,7 @@
                     <img src="amarachiprofilepicture.jpg" class="intro__pic__img">
                 </div>
                 <div class="intro__info">
-                    <div class="intro__info__name">My name is Amarachi Uvere<br><span style="font-size:0.7rem; padding-top: 1rem; line-height:0.5rem;"><i>aka</i></span><br><span style="color:rgb(185, 120, 246); font-size:0.9rem; line-height:0.2rem; margin-bottom: 1rem;">Anomalie</span></div>
+                    <div class="intro__info__name">My name is Amarachi Uvere</div>
                     <div class="intro__info__desc">
                         I am a <span style="display:inline; color:rgb(185, 120, 246);">Software Engineer</span> and Full-Stack Web Developer with a specialisation in <span style="display:inline; color:rgb(185, 120, 246);">Back-End Web Development</span>
                     </div>
@@ -466,25 +496,25 @@
                             <img src="flaskicon.png" class="prj__item__logo__img">
                         </div>
                     </div>
-                    <div class="prj__item__git add-bottom-padding">
+                    <div class="prj__item__git">
                         <a href="https://github.com/Ano-ly/Optimal-Planner">Github Repo</a>
                     </div>
                 </div>
             </div>
             <div class="skl">
                 <p class="skl__p">Skills/ Technologies</p>
-                <p class="skl__lang">C</p>
-                <p class="skl__lang">CSS</p>
-                <p class="skl__lang">DevOps</p>
-                <p class="skl__lang">Flask</p>
-                <p class="skl__lang">HTML</p>
-                <p class="skl__lang">ICP</p>
-                <p class="skl__lang">Javascript</p>
-                <p class="skl__lang">MongoDB</p>
-                <p class="skl__lang">Motoko</p>
-                <p class="skl__lang">MySQL</p>
-                <p class="skl__lang">Python</p>
-                <p class="skl__lang">Redis</p>
+                <div class="skl__lang">C</div>
+                <div class="skl__lang">CSS</div>
+                <div class="skl__lang">DevOps</div>
+                <div class="skl__lang">Flask</div>
+                <div class="skl__lang">HTML</div>
+                <div class="skl__lang">ICP</div>
+                <div class="skl__lang">Javascript</div>
+                <div class="skl__lang">MongoDB</div>
+                <div class="skl__lang">Motoko</div>
+                <div class="skl__lang">MySQL</div>
+                <div class="skl__lang">Python</div>
+                <div class="skl__lang">Redis</div>
             </div>
             <div class="contact">
                 <div class="contact__lkd">
