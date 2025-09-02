@@ -53,6 +53,7 @@
                 align-items: center;
                 box-sizing: border-box;
                 border-radius: 3rem;
+                box-shadow: 0.125rem -0.125rem 0.75rem gold;
                 font-size: 0.6rem;
                 background-color: rgb(24, 22, 22);
                 color: antiquewhite;
@@ -106,7 +107,7 @@
                 justify-content: center;
                 box-sizing: border-box;
                 font-size: 1.3rem;
-                color: gainsboro
+                color: gainsboro;
             }
             .intro {
                 display: flex;
@@ -117,18 +118,21 @@
                 align-items: center;
                 /*height: auto;*/
                 border: 0.02rem solid rgb(109, 102, 125);
-                box-shadow: 0.125rem -0.125rem 0.75rem rgb(127, 121, 121);
+                box-shadow: 0.125rem -0.125rem 0.75rem gold;
                 background-color: rgb(53, 46, 59);
                 background-color: black;
                 padding: 3rem;
                 border-radius: 1rem;
+                position: relative; /* Needed for absolute particles */
+                overflow: hidden;
             } 
             .intro__pic {
                 display: flex;
                 flex-direction: row;
                 box-sizing: border-box;    
                 align-items: center;         
-                justify-content: center;   
+                justify-content: center; 
+                z-index: 100000;  
             }
             .intro__info {
                 display: flex;
@@ -140,6 +144,7 @@
                 border-radius: 1rem;
                 text-align: center;
                 color: white;
+                z-index: 100000;  
                 background-color: rgb(31, 28, 28);
             }
            
@@ -190,8 +195,7 @@
                 padding-bottom: 3rem;
                 padding-top: 3rem;
                 background-color: rgb(24, 22, 22);
-                border-color: aliceblue;
-                border-width: 0.6rem;
+                box-shadow: 0.125rem -0.125rem 0.75rem gold;
                 width: 100%;
                 transition: padding-top 1s;
                 padding-left: 1rem;
@@ -266,6 +270,7 @@
                 background-color: rgb(24, 22, 22);
                 border-color: aliceblue;
                 border-radius: 3rem;
+                box-shadow: 0.125rem -0.125rem 0.75rem gold;
                 border-width: 0.6rem;
                 padding-bottom: 4rem;
                 gap: 1.8rem;
@@ -307,6 +312,7 @@
             .skl {
                 font-size: 0.7rem;
                 border-radius: 3rem;
+                box-shadow: 0.125rem -0.125rem 0.75rem gold;
                 display: flex;
                 gap: 1.5rem;
                 flex-direction: column;
@@ -415,6 +421,18 @@
                     font-size: 1rem;
                 }
             }
+            .intro__particle {
+                position: absolute;
+                background: rgb(185, 120, 246); /* purple shade */
+                border-radius: 50%;
+                opacity: 0.6;
+                pointer-events: none;
+                animation: intro-float 6s ease-in-out infinite;
+            }
+            @keyframes intro-float {
+                0%, 100% { transform: translateY(0px) rotate(0deg); }
+                50% { transform: translateY(-20px) rotate(180deg); }
+            }
         </style>
     </head>
     <body class="noto-sans-warang-citi-regular">
@@ -424,10 +442,8 @@
                     <img src="amarachiprofilepicture.png" class="intro__pic__img">
                 </div>
                 <div class="intro__info">
-                    <div class="intro__info__name">My name is Amarachi Uvere</div>
-                    <div class="intro__info__desc">
-                        I am a <span style="display:inline; color:rgb(185, 120, 246);">Software Engineer</span> and Full-Stack Web Developer with a specialisation in <span style="display:inline; color:rgb(185, 120, 246);">Back-End Web Development</span>
-                    </div>
+                    <div class="intro__info__name"></div>
+                    <div class="intro__info__desc"></div>
                 </div>
             </div>
             <!-- <div class="aboutme">
@@ -656,5 +672,50 @@
         document.querySelectorAll('.prj__item__logo').forEach(element => {
             observelogo.observe(element);
         });
+
+        // Typewriter animation for intro__info__name and intro__info__desc
+        function typeWriterEffect(element, text, speed = 100, callback) {
+            let i = 0;
+            function type() {
+                if (i <= text.length) {
+                    element.textContent = text.substring(0, i);
+                    i++;
+                    setTimeout(type, speed);
+                } else if (callback) {
+                    callback();
+                }
+            }
+            type();
+        }
+
+        const nameEl = document.querySelector('.intro__info__name');
+        const descEl = document.querySelector('.intro__info__desc');
+        const nameText = "My name is Amarachi Uvere";
+        const descText = "I am a Software Engineer and Full-Stack Web Developer with a specialisation in Back-End Web Development";
+
+        typeWriterEffect(nameEl, nameText, 40, () => {
+            setTimeout(() => {
+                typeWriterEffect(descEl, descText, 20);
+            }, 400);
+        });
+
+        // Floating particles animation for .intro
+        function createIntroParticle() {
+            const intro = document.querySelector('.intro');
+            if (!intro) return;
+            const particle = document.createElement('div');
+            particle.className = 'intro__particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            const size = Math.random() * 12 + 8;
+            particle.style.width = particle.style.height = size + 'px';
+            particle.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            particle.style.animationDelay = (Math.random() * 2) + 's';
+            intro.appendChild(particle);
+            setTimeout(() => {
+                particle.remove();
+            }, 6000);
+        }
+        setInterval(createIntroParticle, 350);
     </script>
 </html>
