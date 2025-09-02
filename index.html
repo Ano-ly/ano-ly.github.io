@@ -50,11 +50,14 @@
             .cnt {
                 display: flex;
                 flex-direction: column;
+                align-items: center;
                 box-sizing: border-box;
+                border-radius: 3rem;
                 font-size: 0.6rem;
                 background-color: rgb(24, 22, 22);
                 color: antiquewhite;
                 padding: 2rem;
+                width: 100%;
                 padding-top: 1rem;
             }
             .contact {
@@ -177,14 +180,14 @@
                 background-color: white;
                 border-radius: 0.5rem;
             }
-            .edu {
+            .edu, .exp {
                 border-radius: 3rem;
                 line-height: 1.5rem;
                 display: flex;
                 flex-direction: column;
                 box-sizing: border-box;
                 padding-bottom: 3rem;
-                padding-top: 7rem;
+                padding-top: 3rem;
                 background-color: rgb(24, 22, 22);
                 border-color: aliceblue;
                 border-width: 0.6rem;
@@ -193,14 +196,17 @@
                 padding-left: 2rem;
                 padding-right: 2rem;
             }
-            .edu__item__cert, .prj__item__icon {
+            .edu {
+                padding-top: 7rem;
+            }
+            .edu__item__cert, .prj__item__icon, .exp__item__cert{
                 display: flex;
                 flex-direction: column;
                 box-sizing: border-box;
                 padding-top: 2rem;
                 padding-bottom: 2rem;
             }
-            .edu__item, .prj__item {
+            .edu__item, .prj__item, .exp__item {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -217,13 +223,18 @@
                 color: antiquewhite;
                 background-color: rgb(31, 28, 28);
             }
-            .edu__item__cert__img, .prj__item__icon__img {
+            .exp__item__desc {
+                font-size: 0.8rem;
+                color: whitesmoke;
+                line-height: 1.2rem;
+            }
+            .edu__item__cert__img, .prj__item__icon__img, .exp__item__cert__img {
                 box-sizing: border-box;
-                width: 10rem;
-                border-radius: 0.02rem;
+                width: 15rem;
+                border-radius: 0.2rem;
                 box-shadow: 0.25rem 0.25rem 0.25rem rgb(0, 0, 0);
             }
-            .edu__item__course, .prj__item__tle {
+            .edu__item__course, .prj__item__tle, .exp__item__job {
                 padding-bottom: 0.5rem;
                 font-size: 0.8rem;
                 display: flex;
@@ -231,18 +242,18 @@
                 color: whitesmoke;
                 font-size: 20px;
             }
-            .edu__p, .prj__p, .skl__p, .cnt__p {
+            .edu__p, .prj__p, .skl__p, .cnt__p, .exp__p {
                 display: flex;
                 box-sizing: border-box;
                 color: whitesmoke;
                 font-size: 1.2rem;
             }
-            .edu__item__school, .prj__item__blog {
+            .edu__item__school, .prj__item__blog, .exp__item__company {
                 display: flex;
                 box-sizing: border-box;
                 color: hotpink;
             }
-            .edu__item__view {
+            .edu__item__view, .exp__item__view {
                 font-size: 0.9rem;
             }
             .prj {
@@ -389,16 +400,16 @@
                     border-radius: 1rem;
                     font-size: 0.9rem;
                 }
-                .edu__item, .prj__item {
+                .edu__item, .prj__item, .exp__item {
                     padding-left: 1.5rem;
                 }
                 .cnt {
                     border-radius: 3rem;
                 }
-                .edu__p, .prj__p, .skl__p, .cnt__p {
+                .edu__p, .prj__p, .skl__p, .cnt__p, .exp__p {
                     font-size: 1.5rem;
                 }
-                .edu__item__course, .prj__item__tle {
+                .edu__item__course, .prj__item__tle, .exp__item__job {
                     font-size: 1rem;
                 }
             }
@@ -443,12 +454,46 @@
                     </div>
                 </div>
             </div>
-            
+            <div class="exp">
+                <p class="exp__p">My Experience</p>
+                <div class="exp__item">
+                    <p class="exp__item__job">Backend Development Intern</p>
+                    <p class="exp__item__company"><a href="https://www.example.com/">FlexiSAF EduSoft</a></p>
+                    <p class="exp__item__desc"> 💻 Developed strong foundation in Java programming<br/>💻 Completed capstone project</p>
+                    <div class="exp__item__cert">
+                        <img src="FlexiSAF Cert.png" class="exp__item__cert__img">
+                    </div>
+                </div>
+                <div class="exp__item">
+                    <p class="exp__item__job">Backend Developer</p>
+                    <p class="exp__item__company"><a href="https://ng.linkedin.com/company/tekcify">Tekcify</a></p>
+                    <div class="exp__item__cert">
+                        <img src="Tekcify logo.jpeg" class="exp__item__cert__img">
+                    </div>
+                </div>
+            </div>
             <div class="prj">
                 <p class="prj__p">Projects</p>
                 <div class="prj__item">
+                    <p class="prj__item__tle">Cafe</p>
+                    <p class="prj__item__blog"><a href="https://x.com/CafeDevHub">X Page</a></p>
+                    A platform where devs gather to code, collaborate, and brew ideas ☕💻 Built on the Internet Computer Protocol
+                    <div class="prj__item__icon">
+                        <img src="Cafe Logo.jpeg" class="prj__item__icon__img">
+                    </div>
+                    <div class="prj__item__role"><a href="https://wchl25.worldcomputer.com/">WCHL Hackathon</a> <br/>Role: Backend Developer</div>
+                    <div class="prj__item__tch">Technologies Used: Motoko, ICP</div>
+                    <div class="prj__item__logo">
+                        <img src="motokoicon.jpg" class="prj__item__logo__img">
+                        <img src="icpicon.jpg" class="prj__item__logo__img">
+                    </div>
+                    <div class="prj__item__git">
+                        <a href="https://github.com/JohnBenJB/Cafe">Github Repo</a>
+                    </div>
+                </div>
+                <div class="prj__item">
                     <p class="prj__item__tle">AnomsCalculator</p>
-                    <p class="prj__item__blog"><a href="https://x.com/4mie23/status/1929080072968785961">Blog Post</a></p>
+                    <p class="prj__item__blog"><a "https://x.com/4mie23/status/1929080072968785961">Blog Post</a></p>
                     A user-friendly CGPA calculator (5.0 scale)
                     <div class="prj__item__icon">
                         <img src="AnomsIcon.jpg" class="prj__item__icon__img">
@@ -539,6 +584,7 @@
                 <div class="skl__lang">Python</div>
                 <div class="skl__lang">Redis</div>
                 <div class="skl__lang">React</div>
+                <div class="skl__lang">Java</div>
             </div>
             <div class="contact">
                 <div class="contact__lkd">
@@ -553,7 +599,7 @@
             </div>
             <div class="cnt">
                 <p class="cnt__p">Contact me</p>
-                <p>Email: amarachiuvere@gmail.com</p>
+                <p>Email: <a href="mailto:amarachiuvere@gmail.com">amarachiuvere@gmail.com</a></p>
                 <p>Phone Number: +234 902 189 6581</p>
             </div>
         </main>
